@@ -42,9 +42,7 @@ export default function App() {
       .select('*')
       .order('id', { ascending: false });
 
-    if (error) {
-  Alert.alert('خطأ في Supabase', error.message);
-  console.log('Supabase error:', error);
+  Alert.alert('خطأ', error.message);
     }
     } else {
       setItems(data || []);
