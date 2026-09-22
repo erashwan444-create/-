@@ -43,7 +43,9 @@ export default function App() {
       .order('id', { ascending: false });
 
     if (error) {
-      Alert.alert('خطأ', 'حدث خطأ أثناء جلب البيانات');
+  Alert.alert('خطأ في Supabase', error.message);
+  console.log('Supabase error:', error);
+    }
     } else {
       setItems(data || []);
     }
